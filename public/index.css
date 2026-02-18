@@ -1,0 +1,712 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #FF69FF;
+}
+
+/* typography and icons */
+
+
+
+h1{
+    color: white;
+    font-size: 30px;
+    justify-content: center;
+    margin-bottom: 30px;
+    text-shadow: #FF69FF 0px 0px 1px
+    
+}
+
+i{
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.fa-solid{
+    color: #999;
+}
+
+.liked{
+    color: red;
+}
+
+.retweeted {
+  color: limegreen;
+}
+
+/* layout */
+
+
+main, header{
+    width: 300px;
+    margin: 0 auto;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 10px;
+    background-color: #FF69B4;
+    border-radius: 20px;
+    border: solid;
+    border-color: #5BCEFA;
+}
+
+header{
+    padding-bottom: 1.5em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; 
+    width: 90%;
+    max-width: 400px;
+    margin: 10px auto;
+    
+}
+
+.header-banner {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+
+.auth-btns a, .goto-homescreen-btn {
+    background-color: #5BCEFA;
+    border: 2px solid white;
+    border-radius: 12px;
+    color: white ;
+    font-size: 14px;
+    padding: 8px 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+.auth-btns a:hover {
+    background-color: white;
+    color: #5BCEFA ;
+}
+
+#greeting {
+    
+    font-weight: 500;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+
+input, button, .textarea {
+    font-family: inherit;
+}
+
+.tweet-input-area {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding-top: 15px;
+    
+}
+
+/* textareas + btn */
+
+textarea{
+    border: none;
+    resize: none;
+    padding: 10px;
+    margin: 0 0 20px 0;
+    height: 60px;
+    width: 100%;
+    font-size: 20px;
+    line-height: 30px;
+    background-color: #FF69B4;
+    outline: none;
+}
+
+
+
+.tweet-btn{
+    margin-top: .5em;
+    background-color: #5BCEFA;
+    border: solid 2px;
+    border-color: white;
+    color: white;
+    padding: 10px 19px;
+    border-radius: 20px;
+    width: 100%; 
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.tweet-btn:hover {
+    background-color: dodgerblue;
+    transform: scale(1.05);
+}
+
+.tweet-btn:active {
+    transform: scale(0.95);
+}
+
+/* #msg-btn {
+    background-color: #5BCEFA;
+    color: white;
+    border: 2px solid white;
+    border-radius: 25px;
+    padding: 0 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: transform 0.1s, background-color 0.2s;
+    white-space: nowrap;
+}
+
+#msg-btn:hover {
+    background-color: #3eb0d6;
+    transform: scale(1.05);
+}
+
+#msg-btn:active {
+    transform: scale(0.95);
+} */
+
+
+
+/* tweet */
+
+.tweet{
+    border-top: 1px solid lightgray;
+    padding: 20px 0 0 0;
+    width: 100%;
+    margin: 15px 0;
+}
+
+.tweet-inner{
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    position: relative;
+}
+
+.tweet-details{
+    display: flex;
+    font-size: 13px;
+    justify-content: space-between;
+    width: 160px;
+}
+
+.tweet-detail{
+    display: flex;
+    gap: 4px;
+}
+
+.tweet-reply{
+    border-top: 1px solid lightgray;
+    padding: 20px 0 0 0px;
+    margin: 10px 0 10px 40px;
+    width: 80%;
+}
+
+.handle{
+    font-size: 12px;
+    font-weight: 500;
+    color: #555;
+    margin-top: 0;
+}
+
+.tweet-text{
+    width: 207px;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+/* images */
+
+.profile-pic{
+    border: 1px solid lightgray;
+    border-radius: 50%;
+    width: 50px;
+}
+
+.replied-profile-pic{
+    border: 1px solid lightgray;
+    border-radius: 50%;
+    width: 40px;
+}
+
+.profile-pic#reply-profile-pic {
+    width: 25px;
+    height: 25px
+}
+
+/* utility */
+.hidden{
+    display: none;
+}
+
+.myreply{
+    display: flex;
+    height: 5%
+}
+
+.myreply-button{
+
+    background-color: #5BCEFA;
+    border: solid 2px;
+    border-color: white;
+    color: white;
+    border-radius: 40%;
+    cursor: pointer;
+    width: 20%;
+    height: 3em;
+    margin-top: .5em;
+}
+
+.myreply-button:hover {
+    background-color: dodgerblue;
+    transform: scale(1.05);
+}
+
+.myreply-button:active {
+transform: scale(0.95);
+}
+
+
+.reply-input,
+.reply-input::placeholder{
+    font-size: 13;
+    line-height: 18px;
+}
+
+.delete-tweet{
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: solid #5BCEFA 1px;
+    border-radius: 100%;
+    padding: 5px;
+    font-style: normal;
+}
+
+
+
+
+
+
+.front-page {
+    background-image: url('https://quadcinema.com/wp-content/uploads/2025/05/cruising-9-1400x782.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+.front-page-header {
+
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+
+}
+
+
+/* =========================================
+   SIGN UP / LOGIN PAGE STYLES
+   ========================================= */
+
+/* ========== SIGN UP SCREEN ========= */
+
+
+.signup-screen {
+    padding-top: 20px;
+    margin-top: 60px;
+    
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    gap: .4rem;
+    
+    
+}
+
+.form-inner {
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+    backdrop-filter: blur(10px);     
+}
+
+
+.login-screen {
+    padding-top: 20px;
+    margin-top: 60px;
+}
+
+.form-inner h2 {
+    color: white;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    font-size: 28px;
+}
+
+label {
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 10px; 
+    margin-bottom: 5px;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-inner input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+
+    border: 2px solid transparent;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.9);
+
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.sign-link {
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+}
+
+.sign-link:hover {
+    color: #5BCEFA;
+}
+
+
+
+
+
+
+
+
+/* =========================================
+   --------WebSocket and WebRTC-------------
+   ========================================= */
+
+
+/* CHATROOM */
+
+.chatroom {
+    border: solid #5BCEFA 2px;
+    border-radius: 20px;
+    position: fixed;
+    height: 38rem;
+    width: 25rem;
+    right: 10%;
+    top: 20%;
+    background-color: #FF69B4;
+    display: flex;
+    flex-direction: column;
+}
+
+.chatroom-header {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.chatroom-inner {
+    border: solid #5BCEFA 1px;
+    border-radius: 10px;
+    margin: 10px;
+    background-color: #5BCEFA;
+
+    flex: 1;            /* Takes remaining space */
+    overflow-y: auto;
+    padding: 10px;      /* Inner padding instead of huge bottom padding */
+    position: relative;
+}
+
+.typing-indicator {
+    font-style: italic; 
+    color: gray; 
+    height: 20px;
+    bottom: 1;
+    position: absolute;
+}
+
+/* .text-messages {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 10px;
+    margin-top: auto;
+} */
+
+.text-messages {
+    display: flex;
+    gap: 10px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin-top: auto;
+}
+
+
+
+#chat-input {
+    font-family: inherit;
+    flex: 1;
+    padding: 12px 18px;
+    border: 2px solid white;
+    border-radius: 25px;
+    font-size: 0.85rem;
+    outline: none;
+    
+}
+
+#chat-input:focus {
+    border-color: #5BCEFA; 
+    box-shadow: 0 0 8px rgba(91, 206, 250, 0.5);
+}
+
+#msg-btn {
+    background-color: #5BCEFA;
+    color: white;
+    border: 2px solid white;
+    border-radius: 25px;
+    padding: 0 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: transform 0.1s, background-color 0.2s;
+    white-space: nowrap;
+}
+
+#msg-btn:hover {
+    background-color: #3eb0d6;
+    transform: scale(1.05);
+}
+
+#msg-btn:active {
+    transform: scale(0.95);
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+/* VIDEOCALL */
+
+.videocall {
+    border: solid #5BCEFA 2px;
+    border-radius: 20px;
+    position: fixed;
+    height: 38rem;
+    width: 25rem;
+    background-color: #FF69B4;
+    display: flex;
+    flex-direction: column;
+    top: 20%;
+    left: 10%
+
+}
+
+.videocall-header {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.videocall-inner {
+    border: solid #5BCEFA 1px;
+    border-radius: 10px;
+    margin: 10px;
+    background-color: #5BCEFA;
+
+    flex: 1;
+    /* Takes remaining space */
+    overflow-y: auto;
+    padding: 10px;
+    /* Inner padding instead of huge bottom padding */
+
+}
+
+.videocall-btns {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 10px;
+    margin-top: auto;
+    position: relative;
+}
+
+.videocall-btns .camera-btn {
+    position: absolute;
+    left: 20px;
+    
+    background: #5BCEFA;
+    border: 2px solid white;
+    border-radius: 50%; /* Makes it a circle */
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#call-btn, #hang-btn {
+    background-color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+#call-btn:hover {
+    background-color: green;;
+}
+
+.camera-open {
+    background-color: red !important;
+}
+
+#hang-btn {
+    background-color: #ff4b4b; /* Red for hang up */
+    color: white;
+}
+
+
+
+#localVideo {
+    width: 300px;
+    height: 200px;
+    background: black;
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+#remoteVideo {
+    width: 300px;
+    height: 200px;
+    background: red;
+    display: block;
+    border-radius: 10px;
+}
+
+#videocall-inner {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.chat-time {
+    font-size: 0.75rem; /* Smaller text */
+    color: white;        /* Grey color */
+    margin-right: 8px;  /* Space between time and name */
+}
+
+
+
+
+
+
+
+
+/* =========================================
+   MOBILE TOGGLES (Screens 1200px and below)
+   ========================================= */
+
+/* 1. Default State (PC): Buttons are hidden */
+.mobile-toggle-btn {
+    display: none;
+}
+
+/* 2. Responsive State */
+@media (max-width: 1200px) {
+
+    /* --- Show the Toggle Buttons --- */
+    .mobile-toggle-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 200px; /* Aligns roughly with top of feed */
+        width: 60px;
+        height: 60px;
+        z-index: 1000;
+        
+        background-color: #FF69B4; /* Pink background */
+        border: 3px solid #5BCEFA; /* Blue border */
+        border-radius: 15px;       /* Soft square shape */
+        color: white;
+        font-size: 25px;
+        cursor: pointer;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        transition: transform 0.2s;
+    }
+
+    .mobile-toggle-btn:active {
+        transform: scale(0.9);
+    }
+
+    /* Position Video Button on Left */
+    .video-toggle {
+        left: 10px;
+    }
+
+    /* Position Chat Button on Right */
+    .chat-toggle {
+        right: 10px;
+    }
+
+    /* --- Hide the Modals by default --- */
+    .chatroom, .videocall {
+        display: none !important; /* Force hide */
+        
+        /* Reset positioning so they center on screen when opened */
+        position: fixed;
+        top: 50% !important;
+        left: 50% !important;
+        right: auto !important;
+        bottom: auto !important;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        max-width: 400px;
+        height: 70vh;
+        z-index: 2000;
+        box-shadow: 0 0 0 100vw rgba(0,0,0,0.5); 
+    }
+
+    /* --- Class to Show them when button is clicked --- */
+    .chatroom.active, .videocall.active {
+        display: flex !important; /* Flex allows your inner layout to work */
+    }
+}

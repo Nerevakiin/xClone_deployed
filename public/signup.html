@@ -1,0 +1,67 @@
+<html>
+
+<head>
+	<!-- CSS -->
+	<link rel="stylesheet" href="index.css">
+	
+	<!-- Awesome Font CDN -->
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" 
+	 integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" 
+	 crossorigin="anonymous" referrerpolicy="no-referrer" />
+	
+	 <!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <title>Twinkter Sign Up</title>
+    <link rel="icon" type="image/x-icon" href="/images/icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<header>
+		<h1>Twinkter</h1>
+        <a class="goto-homescreen-btn" href="frontPage.html">home page</a>
+	</header>
+	
+    <main class="signup-screen">
+		
+        <div>
+            <br>
+            <form class="signup-form" id="signup-form" autocomplete="off">
+                <div class="form-inner">
+                    <h2>Sign Up to Twinkter</h2>
+
+                    <label for ="signup-fullname">Full name</label>
+                    <input placeholder="full name" id="signup-fullname" required></input>
+                    
+                    <label for="signup-email">Email</label>
+                    <input type="email" placeholder="poustromail" id="signup-email" name="email" required></input>
+
+                    <label for="signup-username">Username</label>
+                    <input 
+                    placeholder="username"
+                    id="signup-username"
+                    name="username"
+                    pattern="^[a-zA-Z0-9_\-]{1,20}$"
+                    required></input>
+                    
+                    <label for="signup-password">Password</label>
+                    <input type="password" placeholder="poustropassword" id="signup-password" name="password" required></input>
+
+                    <button type="submit" class="tweet-btn" id="signup-btn">sign up to Twinkter!</button>
+                    <p>Already registered? <a href="/login.html" class="sign-link">Sign in here!</a>.</p>
+                    <p id="error-message" class="error"></p>
+                </div>
+            </form>
+		</div>
+		
+
+	</main>
+	<script src="signup.js" type="module"></script>
+    <script src="index.js" type="module"></script>
+    
+</body>
+
+</html>

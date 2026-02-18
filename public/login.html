@@ -1,0 +1,60 @@
+<html>
+
+<head>
+	<!-- CSS -->
+	<link rel="stylesheet" href="index.css">
+	
+	<!-- Awesome Font CDN -->
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" 
+	 integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" 
+	 crossorigin="anonymous" referrerpolicy="no-referrer" />
+	
+	 <!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">
+
+	<title>Twinkter Login</title>
+	<link rel="icon" type="image/x-icon" href="/images/icon.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+</head>
+
+<body>
+	<header>
+		<h1>Twinkter</h1>
+        <a class="goto-homescreen-btn" href="frontPage.html">home page</a>
+	</header>
+	
+	<main class="login-screen">
+		
+		<form class="login-form" id="login-form" autocomplete="off">
+            
+            <div class="form-inner">
+				<h2>ksanagyrises e? ;)</h2>
+				<label for="login-username">username</label>
+				<input 
+				placeholder="poustronoma"
+				id="login-username"
+				name="username"
+				required
+				pattern="^[a-zA-Z0-9_\-]{1,20}$"
+				></input>
+				
+				<label for="login-password">password</label>
+				<input placeholder="poustropassword" id="login-password" name="password" type="password" required></input>
+				
+				<button type ="submit" class="tweet-btn" id="login-btn">log in to twinkter</button>
+				<p>Dont have an account? <a href="/signup.html" class="sign-link">Sign up here!</a>.</p>
+				<p id="error-message" class="error"></p>
+
+			</div>
+			
+		</form>
+		
+	</main>
+	<script src="login.js" type="module"></script>
+	<script src="authUI.js" type="module"></script>
+	<script src="index.js" type="module"></script>
+</body>
+
+</html>

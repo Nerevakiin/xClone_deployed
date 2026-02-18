@@ -1,0 +1,94 @@
+<html>
+
+<head>
+	<!-- CSS -->
+	<link rel="stylesheet" href="index.css">
+
+	<!-- Awesome Font CDN -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+		integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">
+
+	<title>Twinkter</title>
+	<link rel="icon" type="image/x-icon" href="/images/icon.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+	<!-- Mobile Toggle Buttons -->
+	<button id="toggle-video-btn" class="mobile-toggle-btn video-toggle">
+		<i class="fa-solid fa-video"></i>
+	</button>
+
+	<button id="toggle-chat-btn" class="mobile-toggle-btn chat-toggle">
+		<i class="fa-solid fa-comment"></i>
+	</button>
+
+
+	<header>
+		<h1>Twinkter</h1>
+		<div class="header-banner">
+			<p id="greeting" class="top-banner-greeting">greeting</p>
+			<div class="auth-btns">
+				<a id="goto-login-btn" class="goto-login-btn" href="login.html">login</a>
+				<a id="goto-signup-btn" class="goto-signup-btn" href="signup.html">signup</a>
+				<a id="logout-btn" class="logout-btn" href="frontPage.html">logout</a>
+			</div>
+
+		</div>
+	</header>
+	<main>
+		<div class="tweet-input-area">
+			<img src="images/literallyme.jpeg" class="profile-pic">
+			<textarea placeholder="ti egine poustraki?" id="tweet-input"></textarea>
+		</div>
+		<button class="tweet-btn" id="tweet-btn">Twink your thought!</button>
+		<div class="feed" id="feed">
+			<!-- tweet feed here -->
+		</div>
+
+	</main>
+
+	<div id="chatroom" class="chatroom">
+		<h2 class="chatroom-header">grinder ;)</h2>
+		<div class="chatroom-inner" id="chatroom-inner">
+			<div id="typing-indicator" class="typing-indicator"></div>
+		</div>
+
+		<form class="text-messages">
+			<input id="chat-input" placeholder="write your message here" type="text" />
+			<button type="submit" id="msg-btn">send msg</button>
+		</form>
+	</div>
+
+
+	<div id="videocall" class="videocall">
+		<h2 class="videocall-header">live gay sex</h2>
+		<div class="videocall-inner" id="videocall-inner">
+			<video id="localVideo" autoplay playsinline muted controls="false"></video>
+			<video id="remoteVideo" autoplay playsinline controls="false"></video>
+		</div>
+
+		<form class="videocall-btns">
+			<button id="camera-btn" class="camera-btn">
+				<img src="images/cam_icon.svg" class="camera-icon">
+			</button>
+			<button id="call-btn">call</button>
+			<button id="hang-btn">hang up</button>
+		</form>
+	</div>
+
+
+	<script src="index.js" type="module"></script>
+	<script src="authUI.js" type="module"></script>
+	<script src="socket.js" type="module"></script>
+	<script src="mobileResponsive.js" type="module"></script>
+</body>
+
+</html>
