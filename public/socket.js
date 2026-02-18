@@ -23,7 +23,20 @@ export function initializeSocket() {
 
     console.log("Attempting to connect to WSS..."); // this to confirm function runs
 
-    socket = new WebSocket('wss://192.168.100.3:8000/') // create the connection to the websocket server written in server.js
+    // 1. Determine protocol (ws or wss) based on current page security
+    const protocol = window.location.protocol === 'https:' ? 'wss' : 'ws'
+
+    // 2. Get the hostname 
+    const host = window.location.hostname
+
+    // 3. define port
+    const port = 8000
+
+    const wsUrl = `${protocol}://${host}:${port}/`
+
+    console.log(`Connecting websocket to: ${wsUrl}`)
+    
+    socket = new WebSocket(wsUrl) // create the connection to the websocket server written in server.js
 
 
 
