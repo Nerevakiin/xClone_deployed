@@ -1,5 +1,5 @@
 import express from 'express'
-import https from 'https'
+import http from 'http'
 import fs from 'fs'
 import { WebSocketServer, WebSocket } from 'ws'
 import { tweetsRouter } from './routes/tweetsRouter.js'
@@ -16,10 +16,10 @@ const PORT = 8000
 const secret = process.env.SPIRAL_SESSION_SECRET || 'kolotsibouxalaoua'
 
 
-const serverOptions = {
-    key: fs.readFileSync('key.pem'),
-    cert: fs.readFileSync('cert.pem')
-}
+// const serverOptions = {
+//     key: fs.readFileSync('key.pem'),
+//     cert: fs.readFileSync('cert.pem')
+// }
 
 
 // ===== middleware section ========
@@ -63,7 +63,7 @@ app.use(express.static('public'))
 
 
 // create the HTTPS server (REQUIRED for WebSockets + Express)
-const server = https.createServer(serverOptions, app)
+const server = http.createServer(app)
 
 // ======= create the WebSocket server =======
 const wss = new WebSocketServer({ server }) // <- pass the HTTP server here

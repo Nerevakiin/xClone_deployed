@@ -15,7 +15,13 @@ const typingIndicator = document.getElementById('typing-indicator')
 let typingTimer = null
 
 const configuration = {
-    iceServers: [{ urls: "stun:stun1.l.google.com:5349" }]
+    iceServers: [{ urls: "stun:stun1.l.google.com:5349" },
+    {
+        urls: 'turn:38.242.135.174:3478',
+        username: 'myuser',
+        credential: 'malakopitouras'
+    }
+    ]
 }
 
 
@@ -35,7 +41,7 @@ export function initializeSocket() {
     const wsUrl = `${protocol}://${host}:${port}/`
 
     console.log(`Connecting websocket to: ${wsUrl}`)
-    
+
     socket = new WebSocket(wsUrl) // create the connection to the websocket server written in server.js
 
 
@@ -78,7 +84,7 @@ export function initializeSocket() {
                 clearTimeout(typingTimer)
                 typingTimer = setTimeout(() => {
                     typingIndicator.textContent = ''
-                }, 3000) 
+                }, 3000)
             }
 
 
