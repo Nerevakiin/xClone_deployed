@@ -36,9 +36,9 @@ export function initializeSocket() {
     const host = window.location.hostname
 
     // 3. define port
-    const port = 8000
+    // const port = 8000
 
-    const wsUrl = `${protocol}://${host}:${port}/`
+    const wsUrl = `${protocol}://${host}/`
 
     console.log(`Connecting websocket to: ${wsUrl}`)
 
