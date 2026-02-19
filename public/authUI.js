@@ -1,22 +1,26 @@
 // === check if user is signed in ====
 export async function checkAuth() {
     try {
+        console.log('CheckAuth checking auth')
         const res = await fetch('/api/auth/me', {
             credentials: 'include'
         })
 
         if (!res.ok) {
             console.warn('unexpected response', res.status)
+            console.log('CheckAuth bad response')
             return false 
         }
 
         const user = await res.json()
         
         if (!user.isLoggedIn) {
+            console.log('CheckAuth nobody logged in')
             return false
         }
 
         name = user.name
+        console.log('AUTH UI HERE ! someone logged in with name: ', name)
         
         return user.name
 
