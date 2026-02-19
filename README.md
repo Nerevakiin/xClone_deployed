@@ -15,4 +15,4 @@ more stuff to add:
 12. Add webRTC for video calls. ✅ (11 Feb 2026)
 13. Auto uwuification ✅ (11 Feb 2026)
 14. Make the website responsive to different screens and mobile ✅ (18 Feb 2026)
-15. Upload to a contact vm
+15. Upload to a contact vm ✅ (18 Feb 2026)
