@@ -15,6 +15,8 @@ const app = express()
 const PORT = 8000
 const secret = process.env.SPIRAL_SESSION_SECRET || 'kolotsibouxalaoua'
 
+app.set('trust proxy', 1) // This tells Express to trust the proxy headers (like X-Forwarded-Proto) that nginx is sending
+
 
 // const serverOptions = {
 //     key: fs.readFileSync('key.pem'),
@@ -44,7 +46,7 @@ const sessionMiddleware = session({
     cookie: {
         httpOnly: true,
         secure: true,
-        sameSite: 'lax'
+        sameSite: 'none'
     }
 })
 

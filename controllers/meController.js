@@ -9,6 +9,7 @@ export async function getCurrentUser(req, res) {
 
         // see if there is no logged in user
         if (!req.session || !req.session.userId) {
+            console.log('Me Controller here. No user is logged')
             return res.json({ isLoggedIn: false })
         }
 

@@ -448,7 +448,7 @@ label {
     font-style: italic; 
     color: gray; 
     height: 20px;
-    bottom: 1;
+    bottom: 5px;
     position: absolute;
 }
 
