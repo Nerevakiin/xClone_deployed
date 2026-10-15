@@ -17,20 +17,21 @@ more stuff to add:
 14. Make the website responsive to different screens and mobile ✅ (18 Feb 2026)
 15. Upload to a contact vm ✅ (18 Feb 2026)
 16. Install and configure Nginx ✅ (20 Feb 2026)
-17. Dockerization, Docker Auth & Docker integration with nginx
-18. Implement CI with GitHub Actions, Prettier, ESLint and automated tests
-19. Automate Docker image builds and publishing to Docker Hub
-20. Migrate production from PM2 to Docker
-21. Integrate PostgreSQL and Prisma ORM using Docker Compose, while preserving SQLite and existing storage
-22. Implement Prisma schema modeling, relational queries and automated database migrations
-23. Configure Pull Request status checks and branch protection
-24. Implement CD with GitHub Actions and automated VPS deployment via SSH
-25. Implement health checks and automated deployment verification
-26. Implement automated database backups and rollback mechanisms
-27. Introduce monitoring, logging and deployment failure alerts
-28. Integrate Cloudflare CDN, caching and edge security
-29. Introduce Redis for application caching and cache invalidation
-30. Deploy Twinkter to an AWS EC2 instance and Configure networking, IAM and persistent storage
-31. Deploy Twinkter to Kubernetes using Pods, Deployments and Services
-32. Deploy a single-node Kubernetes cluster on AWS EC2 using k3s
-33. Experiment with multiple application replicas, load balancing and horizontal scaling
+17. Configure PM2 for constant uptime ✅ (21 Feb 2026)
+18. Dockerization, Docker Auth & Docker integration with nginx
+19. Implement CI with GitHub Actions, Prettier, ESLint and automated tests
+20. Automate Docker image builds and publishing to Docker Hub
+21. Migrate production from PM2 to Docker
+22. Integrate PostgreSQL and Prisma ORM using Docker Compose, while preserving SQLite and existing storage
+23. Implement Prisma schema modeling, relational queries and automated database migrations
+24. Configure Pull Request status checks and branch protection
+25. Implement CD with GitHub Actions and automated VPS deployment via SSH
+26. Implement health checks and automated deployment verification
+27. Implement automated database backups and rollback mechanisms
+28. Introduce monitoring, logging and deployment failure alerts
+29. Integrate Cloudflare CDN, caching and edge security
+30. Introduce Redis for application caching and cache invalidation
+31. Deploy Twinkter to an AWS EC2 instance and Configure networking, IAM and persistent storage
+32. Deploy Twinkter to Kubernetes using Pods, Deployments and Services
+33. Deploy a single-node Kubernetes cluster on AWS EC2 using k3s
+34. Experiment with multiple application replicas, load balancing and horizontal scaling
