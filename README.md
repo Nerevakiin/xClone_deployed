@@ -16,3 +16,19 @@ more stuff to add:
 13. Auto uwuification ✅ (11 Feb 2026)
 14. Make the website responsive to different screens and mobile ✅ (18 Feb 2026)
 15. Upload to a contact vm ✅ (18 Feb 2026)
+16. Install and configure Nginx ✅ (20 Feb 2026)
+17. Dockerization, Docker Auth & Docker integration with nginx
+18. Implement CI with GitHub Actions, Prettier, ESLint and automated tests
+19. Automate Docker image builds and publishing to Docker Hub
+20. Migrate production from PM2 to Docker
+21. Configure Pull Request status checks and branch protection
+22. Implement CD with GitHub Actions and automated VPS deployment via SSH
+23. Implement health checks and automated deployment verification
+24. Implement automated database backups and rollback mechanisms
+25. Introduce monitoring, logging and deployment failure alerts
+26. Integrate Cloudflare CDN, caching and edge security
+27. Introduce Redis for application caching and cache invalidation
+28. Deploy Twinkter to an AWS EC2 instance and Configure networking, IAM and persistent storage
+29. Deploy Twinkter to Kubernetes using Pods, Deployments and Services
+30. Deploy a single-node Kubernetes cluster on AWS EC2 using k3s
+31. Experiment with multiple application replicas, load balancing and horizontal scaling
